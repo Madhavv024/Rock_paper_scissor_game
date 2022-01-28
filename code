@@ -1,0 +1,38 @@
+import random
+print ("comp turn: Stone(s) Paper(p) Scissor(x)")
+randomno=random.randint(0,2)
+# print(randomno)
+if randomno==0:
+    comp='s'
+elif randomno==1:
+    comp='p'
+elif randomno==2:
+    comp='x'
+    
+
+player = input ("Your's Turn: Stone(s) Paper(p) Scisosr(x): ")
+def gameWin(comp,player):
+   
+       if comp==player:
+           print("Game tied")
+       elif (comp=='s'and player=='p'):
+            print("You win")
+       elif (comp=='p'and player=='s'):
+            print("You lose")
+       elif (comp=='p'and player=='x'):
+            print("You win")
+       elif (comp=='x' and player=='p'):
+            print("You lose")
+       elif (comp=='s' and player=='x'):
+            print("You lose")
+       elif (comp=='x' and player=='s'):
+            print("You win")
+       else:
+            print("Enter corret value")
+
+
+           
+gameWin(comp,player)
+
+print ("Comp chose",comp)
+print("You chose",player)
